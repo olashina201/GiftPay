@@ -8,6 +8,7 @@ import {
   NavBtnLink
 } from './NavbarElements';
 import logo from "../../images/logo.svg";
+import { BiCart } from "react-icons/bi";
 
 const Navbar = () => {
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          <NavBtnLink to='/signin'><BiCart />Cart</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

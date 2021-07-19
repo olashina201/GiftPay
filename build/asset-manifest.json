@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9848db27.chunk.css",
+    "main.js": "/static/js/main.9ccd6ecb.chunk.js",
+    "main.js.map": "/static/js/main.9ccd6ecb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a7d2e42b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a7d2e42b.js.map",
+    "static/js/2.2c2bd490.chunk.js": "/static/js/2.2c2bd490.chunk.js",
+    "static/js/2.2c2bd490.chunk.js.map": "/static/js/2.2c2bd490.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9848db27.chunk.css.map": "/static/css/main.9848db27.chunk.css.map",
+    "static/js/2.2c2bd490.chunk.js.LICENSE.txt": "/static/js/2.2c2bd490.chunk.js.LICENSE.txt",
+    "static/media/product.css": "/static/media/men-suit-png-9479.09437a7e.png",
+    "static/media/laptop1.15666e90.png": "/static/media/laptop1.15666e90.png",
+    "static/media/logo.b70e2770.svg": "/static/media/logo.b70e2770.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7d2e42b.js",
+    "static/js/2.2c2bd490.chunk.js",
+    "static/css/main.9848db27.chunk.css",
+    "static/js/main.9ccd6ecb.chunk.js"
+  ]
+}

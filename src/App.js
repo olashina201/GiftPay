@@ -7,11 +7,13 @@ import Services from './pages/services';
 import Contact from './pages/contact';
 import SignUp from './pages/signup';
 import Product from "./components/Product/Product";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Hero />
       <Switch>
         <Route path='/' exact component={Product} />
         <Route path='/about' component={About} />
