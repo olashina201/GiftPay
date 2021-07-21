@@ -1,22 +1,19 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages';
-import About from './pages/about';
+import Home from "./pages/index";
+import About from './components/About/About';
 import Services from './pages/services';
 import Contact from './pages/contact';
 import SignUp from './pages/signup';
 import Product from "./components/Product/Product";
-import Hero from "./components/Hero/Hero";
+import Slider from "./components/Hero/Slider";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Hero />
+      <Home />
       <Switch>
-        <Route path='/' exact component={Product} />
-        <Route path='/about' component={About} />
         <Route path='/services' component={Services} />
         <Route path='/contact-us' component={Contact} />
         <Route path='/sign-up' component={SignUp} />
