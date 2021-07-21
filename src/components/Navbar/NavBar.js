@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/giftpay.png"
-import user from "../../assets/images/user.png"
+import logo from "../../assets/images/giftpay.png";
+import user from "../../assets/images/shopping-cart.png";
 import "../../assets/css/bootstrap.css";
 import "../../assets/css/style.css";
 import "../../assets/css/responsive.css";
