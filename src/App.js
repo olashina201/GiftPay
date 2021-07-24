@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
+import { commerce } from "./components/Commerce";
 import Navbar from './components/Navbar/NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./pages/index";
@@ -10,6 +11,7 @@ import Product from "./components/Product/Product";
 import Slider from "./components/Hero/Slider";
 
 function App() {
+  
   return (
     <Router>
       <Home />

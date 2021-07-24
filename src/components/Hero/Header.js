@@ -2,10 +2,10 @@ import React from "react";
 import NavBar from "../Navbar/NavBar";
 import Slider from "../Hero/Slider";
 
-function Header() {
+function Header({cart}) {
   return (
     <div class="hero_area">
-      <NavBar />
+      <NavBar cart={cart} />
       <Slider />
     </div>
   );

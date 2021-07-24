@@ -5,7 +5,7 @@ import "../../assets/css/bootstrap.css";
 import "../../assets/css/style.css";
 import "../../assets/css/responsive.css";
 
-function NavBar() {
+function NavBar({cart}) {
   const [navbar, setNavbar] = useState(false)
 
   const toggle = () => {setNavbar(!navbar)}
@@ -63,7 +63,7 @@ function NavBar() {
             <div className="user_option">
               <a href="">
                 <img src={user} alt="" />
-                <span>Cart</span>
+                <span>{cart.total_items}</span>
               </a>
               <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button
