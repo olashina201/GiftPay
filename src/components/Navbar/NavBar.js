@@ -43,11 +43,11 @@ function NavBar({cart}) {
                   About
                 </a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <a className="nav-link" href="shop.html">
                   Shop{" "}
                 </a>
-              </li> */}
+              </li>
               <li className="nav-item">
                 <a className="nav-link" href="furniture.html">
                   {" "}
