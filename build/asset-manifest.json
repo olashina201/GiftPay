@@ -1,20 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.15301371.chunk.css",
-    "main.js": "/static/js/main.f6ff393a.chunk.js",
-    "main.js.map": "/static/js/main.f6ff393a.chunk.js.map",
+    "main.js": "/static/js/main.c099f474.chunk.js",
+    "main.js.map": "/static/js/main.c099f474.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a7d2e42b.js",
     "runtime-main.js.map": "/static/js/runtime-main.a7d2e42b.js.map",
-    "static/js/2.735ec75c.chunk.js": "/static/js/2.735ec75c.chunk.js",
-    "static/js/2.735ec75c.chunk.js.map": "/static/js/2.735ec75c.chunk.js.map",
+    "static/js/2.5c5486a4.chunk.js": "/static/js/2.5c5486a4.chunk.js",
+    "static/js/2.5c5486a4.chunk.js.map": "/static/js/2.5c5486a4.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.15301371.chunk.css.map": "/static/css/main.15301371.chunk.css.map",
-    "static/js/2.735ec75c.chunk.js.LICENSE.txt": "/static/js/2.735ec75c.chunk.js.LICENSE.txt",
+    "static/js/2.5c5486a4.chunk.js.LICENSE.txt": "/static/js/2.5c5486a4.chunk.js.LICENSE.txt",
     "static/media/about-img.24cf6050.png": "/static/media/about-img.24cf6050.png",
     "static/media/discount-img.cade18b4.png": "/static/media/discount-img.cade18b4.png",
     "static/media/product.css": "/static/media/men-suit-png-9479.09437a7e.png",
     "static/media/style.css": "/static/media/menu.3f6bb5bc.png",
-    "static/media/laptop1.15666e90.png": "/static/media/laptop1.15666e90.png",
     "static/media/t-1.41d62610.jpg": "/static/media/t-1.41d62610.jpg",
     "static/media/t-2.4028fa97.jpg": "/static/media/t-2.4028fa97.jpg",
     "static/media/t-3.18a6d0e9.jpg": "/static/media/t-3.18a6d0e9.jpg",
@@ -23,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a7d2e42b.js",
-    "static/js/2.735ec75c.chunk.js",
+    "static/js/2.5c5486a4.chunk.js",
     "static/css/main.15301371.chunk.css",
-    "static/js/main.f6ff393a.chunk.js"
+    "static/js/main.c099f474.chunk.js"
   ]
 }
