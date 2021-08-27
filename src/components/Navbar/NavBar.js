@@ -4,13 +4,12 @@ import user from "../../assets/images/shopping-cart.png";
 import "../../assets/css/bootstrap.css";
 import "../../assets/css/style.css";
 import "../../assets/css/responsive.css";
+// import Cart from "../Product/Cart";
 
-function NavBar({ cart }) {
+function NavBar({ allCart }) {
   const [navbar, setNavbar] = useState(false);
-
-  const toggle = () => {
-    setNavbar(!navbar);
-  };
+  const [showCart, setShowCart] = useState(false);
+  // console.log("cart", allCart.line_items);
 
   return (
     <header className="header_section">
@@ -27,7 +26,7 @@ function NavBar({ cart }) {
             aria-controls="navbarSupportedContent"
             aria-expanded={navbar ? "true" : "false"}
             aria-label="Toggle navigation"
-            onClick={toggle}
+            onClick={() => setNavbar(!navbar)}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -70,9 +69,9 @@ function NavBar({ cart }) {
               </li>
             </ul>
             <div className="user_option">
-              <a href="/cart">
+              <a href="/cart" onClick={() => setShowCart(!showCart)}>
                 <img src={user} alt="" />
-                <span>{cart.total_items}</span>
+                <span>{allCart.total_items}</span>
               </a>
               <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button

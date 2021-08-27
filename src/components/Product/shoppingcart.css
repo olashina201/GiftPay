@@ -1,202 +1,172 @@
-/* I wanted to go with a mobile first approach, but it actually lead to more verbose CSS in this case, so I've gone web first. Can't always force things... Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned. */
-/* Global settings */
-/* Global "table" column settings */
- .product-image {
-	 float: left;
-	 width: 20%;
+.title {
+    margin-bottom: 5vh
 }
- .product-details {
-	 float: left;
-	 width: 37%;
+
+.card {
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent
 }
- .product-price {
-	 float: left;
-	 width: 12%;
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto
+    }
 }
- .product-quantity {
-	 float: left;
-	 width: 10%;
+
+.cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem
 }
- .product-removal {
-	 float: left;
-	 width: 9%;
+
+@media(max-width:767px) {
+    .cart {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem
+    }
 }
- .product-line-price {
-	 float: left;
-	 width: 12%;
-	 text-align: right;
+
+.summary {
+    background-color: #ddd;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65)
 }
-/* This is used as the traditional .clearfix class */
- .group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before, .group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
-	 content: '';
-	 display: table;
+
+@media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem
+    }
 }
- .group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
-	 clear: both;
+
+.summary .col-2 {
+    padding: 0
 }
- .group, .shopping-cart, .column-labels, .product, .totals-item {
-	 zoom: 1;
+
+.summary .col-10 {
+    padding: 0
 }
-/* Apply clearfix in a few places */
-/* Apply dollar signs */
- .product .product-price:before, .product .product-line-price:before, .totals-value:before {
-	 content: '$';
+
+.row {
+    margin: 0
 }
-/* Body/Header stuff */
- body {
-	 padding: 0px 0px 0px 0px;
-	 font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	 font-weight: 100;
+
+.title b {
+    font-size: 1.5rem
 }
- h1 {
-	 font-weight: 100;
+
+.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
 }
- label {
-	 color: #aaa;
+
+.col-2,
+.col {
+    padding: 0 1vh
 }
- .shopping-cart {
-	 margin-top: -45px;
+
+a {
+    padding: 0 1vh
 }
-/* Column headers */
- .column-labels label {
-	 padding-bottom: 15px;
-	 margin-bottom: 15px;
-	 border-bottom: 1px solid #eee;
+
+.close {
+    margin-left: auto;
+    font-size: 0.7rem
 }
- .column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
-	 text-indent: -9999px;
+
+img {
+    width: 3.5rem
 }
-/* Product entries */
- .product {
-	 margin-bottom: 20px;
-	 padding-bottom: 10px;
-	 border-bottom: 1px solid #eee;
+
+.back-to-shop {
+    margin-top: 4.5rem
 }
- .product .product-image {
-	 text-align: center;
+
+h5 {
+    margin-top: 4vh
 }
- .product .product-image img {
-	 width: 100px;
+
+hr {
+    margin-top: 1.25rem
 }
- .product .product-details .product-title {
-	 margin-right: 20px;
-	 font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+
+form {
+    padding: 2vh 0
 }
- .product .product-details .product-description {
-	 margin: 5px 20px 5px 0;
-	 line-height: 1.4em;
+
+select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
 }
- .product .product-quantity input {
-	 width: 40px;
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
 }
- .product .remove-product {
-	 border: 0;
-	 padding: 4px 8px;
-	 background-color: #c66;
-	 color: #fff;
-	 font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
-	 font-size: 12px;
-	 border-radius: 3px;
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
 }
- .product .remove-product:hover {
-	 background-color: #a44;
+
+.btn {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0
 }
-/* Totals section */
- .totals .totals-item {
-	 float: right;
-	 clear: both;
-	 width: 100%;
-	 margin-bottom: 10px;
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+	user-select: none;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none
 }
- .totals .totals-item label {
-	 float: left;
-	 clear: both;
-	 width: 79%;
-	 text-align: right;
+
+.btn:hover {
+    color: white
 }
- .totals .totals-item .totals-value {
-	 float: right;
-	 width: 21%;
-	 text-align: right;
+
+a {
+    color: black
 }
- .totals .totals-item-total {
-	 font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+
+a:hover {
+    color: black;
+    text-decoration: none
 }
- .checkout {
-	 float: right;
-	 border: 0;
-	 margin-top: 20px;
-	 padding: 6px 25px;
-	 background-color: #6b6;
-	 color: #fff;
-	 font-size: 25px;
-	 border-radius: 3px;
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center
 }
- .checkout:hover {
-	 background-color: #494;
-}
-/* Make adjustments for tablet */
- @media screen and (max-width: 650px) {
-	 .shopping-cart {
-		 margin: 0;
-		 padding-top: 20px;
-		 border-top: 1px solid #eee;
-	}
-	 .column-labels {
-		 display: none;
-	}
-	 .product-image {
-		 float: right;
-		 width: auto;
-	}
-	 .product-image img {
-		 margin: 0 0 10px 10px;
-	}
-	 .product-details {
-		 float: none;
-		 margin-bottom: 10px;
-		 width: auto;
-	}
-	 .product-price {
-		 clear: both;
-		 width: 70px;
-	}
-	 .product-quantity {
-		 width: 100px;
-	}
-	 .product-quantity input {
-		 margin-left: 20px;
-	}
-	 .product-quantity:before {
-		 content: 'x';
-	}
-	 .product-removal {
-		 width: auto;
-	}
-	 .product-line-price {
-		 float: right;
-		 width: 70px;
-	}
-}
-/* Make more adjustments for phone */
- @media screen and (max-width: 350px) {
-	 .product-removal {
-		 float: right;
-	}
-	 .product-line-price {
-		 float: right;
-		 clear: left;
-		 width: auto;
-		 margin-top: 10px;
-	}
-	 .product .product-line-price:before {
-		 content: 'Item Total: $';
-	}
-	 .totals .totals-item label {
-		 width: 60%;
-	}
-	 .totals .totals-item .totals-value {
-		 width: 40%;
-	}
-}
- 
