@@ -57,9 +57,7 @@ function Slider() {
               <div className="row">
                 <div className="col-md-6">
                   <div className="detail-box">
-                    <h1>
-                      The Latest
-                    </h1>
+                    <h1>The Latest</h1>
                     <h1>
                       <span>Electronics</span>
                     </h1>

@@ -5,10 +5,12 @@ import "../../assets/css/bootstrap.css";
 import "../../assets/css/style.css";
 import "../../assets/css/responsive.css";
 
-function NavBar({cart}) {
-  const [navbar, setNavbar] = useState(false)
+function NavBar({ cart }) {
+  const [navbar, setNavbar] = useState(false);
 
-  const toggle = () => {setNavbar(!navbar)}
+  const toggle = () => {
+    setNavbar(!navbar);
+  };
 
   return (
     <header className="header_section">
@@ -18,19 +20,26 @@ function NavBar({cart}) {
             <img src={logo} alt="" />
           </a>
           <button
-            className={ navbar ? "navbar-toggler" : "navbar-toggler collapsed"}
+            className={navbar ? "navbar-toggler" : "navbar-toggler collapsed"}
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded={ navbar ? "true" : "false"}
+            aria-expanded={navbar ? "true" : "false"}
             aria-label="Toggle navigation"
             onClick={toggle}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className={ navbar ? "collapse navbar-collapse show" : "collapse navbar-collapse lg_nav-toggle" } id="navbarSupportedContent">
+          <div
+            className={
+              navbar
+                ? "collapse navbar-collapse show"
+                : "collapse navbar-collapse lg_nav-toggle"
+            }
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav  ">
               <li className="nav-item active">
                 <a className="nav-link" href="index.html">
@@ -38,30 +47,30 @@ function NavBar({cart}) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="about.html">
+                <a className="nav-link" href="/about">
                   {" "}
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="shop.html">
+                <a className="nav-link" href="/shop">
                   Shop{" "}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="furniture.html">
+                <a className="nav-link" href="/furniture">
                   {" "}
                   Electronics{" "}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="contact.html">
+                <a className="nav-link" href="/contact">
                   Contact us
                 </a>
               </li>
             </ul>
             <div className="user_option">
-              <a href="">
+              <a href="/cart">
                 <img src={user} alt="" />
                 <span>{cart.total_items}</span>
               </a>

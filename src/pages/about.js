@@ -1,18 +1,14 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Hero/Header";
+import About from "../components/About/About";
 
-const About = () => {
+const Abouts = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '90vh'
-      }}
-    >
-      <h1>About</h1>
-    </div>
+    <>
+      <Header />
+      <About />
+    </>
   );
 };
 
-export default About;
+export default Abouts;

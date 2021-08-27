@@ -22,7 +22,11 @@ function Contact() {
                 <input type="text" placeholder="Phone" />
               </div>
               <div>
-                <input type="text" className="message-box" placeholder="Message" />
+                <input
+                  type="text"
+                  className="message-box"
+                  placeholder="Message"
+                />
               </div>
               <div className="d-flex ">
                 <button>SEND</button>
