@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ item }) => {
+const Cart = ({ item, updateCartQty, removeCart }) => {
   return (
     <div className="row border-top border-bottom">
       <div className="row main align-items-center">
@@ -9,18 +9,34 @@ const Cart = ({ item }) => {
         </div>
         <div className="col">
           <div className="row text-muted">{item.name}</div>
-          <div className="row">Cotton T-shirt</div>
+          <div className="row">{item.name}</div>
         </div>
         <div className="col">
           {" "}
-          <a href="#">-</a>
+          <button onClick={() => updateCartQty(item.id, item.quantity - 1)}>
+            -
+          </button>
           <a href="#" className="border">
-            1
+            {item.quantity}
           </a>
-          <a href="#">+</a>{" "}
+          <button
+            onClick={() => {
+              updateCartQty(item.id, item.quantity + 1);
+            }}
+          >
+            +
+          </button>{" "}
         </div>
         <div className="col">
-          &euro; 44.00 <span className="close">&#10005;</span>
+          {item.price.formatted_with_code}
+          <button
+            className="close"
+            onClick={() => {
+              removeCart(item.id);
+            }}
+          >
+            &#10005;
+          </button>
         </div>
       </div>
     </div>

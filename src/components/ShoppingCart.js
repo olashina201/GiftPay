@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { commerce } from "./Commerce";
+import React from "react";
 import "../assets/css/shoppingcart.css";
 import Cart from "./Cart";
 
-const ShoppingCart = () => {
-  const [state, setState] = useState({});
-  const [loading, setLoading] = useState(true);
-  console.log(state);
-
-  useEffect(async () => {
-    await commerce.cart.retrieve().then((cart) => {
-      setState(cart);
-      setLoading(false);
-    });
-  }, []);
+function ShoppingCart({ loading, cart, updateCartQty, removeCart, emptyCart }) {
+  console.log(cart.line_items);
 
   if (loading) return <h1>Loading...</h1>;
 
@@ -29,15 +19,21 @@ const ShoppingCart = () => {
                 </h4>
               </div>
               <div className="col align-self-center text-right text-muted">
-                {`${state.total_unique_items} items`}
+                {`${cart.total_unique_items} items`}
               </div>
             </div>
           </div>
-          {state.line_items.map((item) => {
-            <Cart item={item} key={item.id} />;
-          })}
+          {cart.line_items.map((products) => (
+            <Cart
+              item={products}
+              key={products.id}
+              updateCartQty={updateCartQty}
+              removeCart={removeCart}
+              emptyCart={emptyCart}
+            />
+          ))}
           <div className="back-to-shop">
-            <a href="#">&leftarrow;</a>
+            <a href="/products">&leftarrow;</a>
             <span className="text-muted">Back to shop</span>
           </div>
         </div>
@@ -50,7 +46,7 @@ const ShoppingCart = () => {
           <hr />
           <div className="row">
             <div className="col" style={{ paddingLeft: "0" }}>
-              {`${state.total_unique_items} items`}
+              {`${cart.total_unique_items} items`}
             </div>
             <div className="col text-right">&euro; 132.00</div>
           </div>
@@ -68,13 +64,13 @@ const ShoppingCart = () => {
             style={{ borderTop: "1px solid rgba(0,0,0,.1)", padding: "2vh 0" }}
           >
             <div className="col">TOTAL PRICE</div>
-            <div className="col text-right">{`${state.subtotal.formatted_with_symbol}`}</div>
+            <div className="col text-right">{`${cart.subtotal.formatted_with_symbol}`}</div>
           </div>{" "}
           <button className="btn">CHECKOUT</button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ShoppingCart;
