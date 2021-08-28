@@ -6,7 +6,7 @@ import "../../assets/css/style.css";
 import "../../assets/css/responsive.css";
 // import Cart from "../Product/Cart";
 
-function NavBar({ allCart }) {
+function NavBar({ cart }) {
   const [navbar, setNavbar] = useState(false);
   const [showCart, setShowCart] = useState(false);
   // console.log("cart", allCart.line_items);
@@ -15,7 +15,7 @@ function NavBar({ allCart }) {
     <header className="header_section">
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg custom_nav-container">
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="/">
             <img src={logo} alt="" />
           </a>
           <button
@@ -40,8 +40,8 @@ function NavBar({ allCart }) {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav  ">
-              <li className="nav-item active">
-                <a className="nav-link" href="index.html">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
@@ -52,14 +52,8 @@ function NavBar({ allCart }) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/shop">
-                  Shop{" "}
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/furniture">
-                  {" "}
-                  Electronics{" "}
+                <a className="nav-link" href="/products">
+                  Product{" "}
                 </a>
               </li>
               <li className="nav-item">
@@ -71,7 +65,7 @@ function NavBar({ allCart }) {
             <div className="user_option">
               <a href="/cart" onClick={() => setShowCart(!showCart)}>
                 <img src={user} alt="" />
-                <span>{allCart.total_items}</span>
+                <span>{cart}</span>
               </a>
               <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button

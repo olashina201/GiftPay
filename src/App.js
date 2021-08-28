@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Abouts from "./pages/about";
+import Home from "./pages/index";
 import Services from "./pages/services";
-import Contact from "./pages/contact";
+import Contact from "./components/Contact/Contact";
 import Product from "./components/Product/Product";
 import { commerce } from "./components/Commerce";
 import NavBar from "./components/Navbar/NavBar";
@@ -58,8 +59,19 @@ function App() {
   }, []);
   return (
     <Router>
-      <NavBar allCart={cart} cart={cart.total_items} />
+      <NavBar cart={cart.total_items} />
       <Switch>
+        <Route
+          exact
+          path="/"
+          component={() => (
+            <Home
+              product={product}
+              addToCart={addToCart}
+              cart={cart.total_items}
+            />
+          )}
+        />
         <Route path="/services" component={Services} />
         <Route path="/contact-us" component={Contact} />
         <Route
