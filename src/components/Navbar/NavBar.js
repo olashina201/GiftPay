@@ -8,8 +8,6 @@ import "../../assets/css/responsive.css";
 
 function NavBar({ cart }) {
   const [navbar, setNavbar] = useState(false);
-  const [showCart, setShowCart] = useState(false);
-  // console.log("cart", allCart.line_items);
 
   return (
     <header className="header_section">
@@ -63,16 +61,16 @@ function NavBar({ cart }) {
               </li>
             </ul>
             <div className="user_option">
-              <a href="/cart" onClick={() => setShowCart(!showCart)}>
+              <a href="/cart">
                 <img src={user} alt="" />
                 <span>{cart}</span>
               </a>
-              <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+              {/* <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button
                   className="btn  my-2 my-sm-0 nav_search-btn"
                   type="submit"
                 ></button>
-              </form>
+              </form> */}
             </div>
           </div>
           {/* <div>

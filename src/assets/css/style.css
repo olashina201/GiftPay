@@ -59,9 +59,9 @@ body {
   height: 100vh;
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;
-  position: absolute;
   background-repeat: no-repeat;
-  overflow: hidden;
+  /* overflow: hidden; */
+  z-index: 2;
 }
 
 .hero_area::after {
@@ -86,7 +86,6 @@ body {
 
 .header_section {
   overflow-x: hidden;
-  background-color: #24d278;
 }
 
 .header_section .container-fluid {
@@ -111,7 +110,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -292,7 +290,7 @@ a:focus {
 }
 
 .slider_section .detail-box .btn-box {
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 .slider_section .detail-box .btn-box a {
@@ -452,7 +450,7 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  bottom: -150px;
+  bottom: -100px;
 }
 
 .slider_section .carousel-indicators li {

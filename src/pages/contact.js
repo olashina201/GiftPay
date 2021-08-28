@@ -1,12 +1,14 @@
 import React from "react";
+import Contact from "../components/Contact/Contact";
 import NavBar from "../components/Navbar/NavBar";
 
-const Contact = () => {
+const ContactUs = () => {
   return (
     <>
       <NavBar />
+      <Contact />
     </>
   );
 };
 
-export default Contact;
+export default ContactUs;

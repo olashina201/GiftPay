@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Abouts from "./pages/about";
 import Home from "./pages/index";
 import Services from "./pages/services";
-import Contact from "./components/Contact/Contact";
+import ContactUs from "./pages/contact";
 import Product from "./components/Product/Product";
 import { commerce } from "./components/Commerce";
-import NavBar from "./components/Navbar/NavBar";
+//import NavBar from "./components/Navbar/NavBar";
 import Trending from "./components/Trending/Trending";
 import Footer from "./components/Footer/Footer";
 import ShoppingCart from "./components/ShoppingCart";
@@ -59,21 +59,16 @@ function App() {
   }, []);
   return (
     <Router>
-      <NavBar cart={cart.total_items} />
       <Switch>
         <Route
           exact
           path="/"
           component={() => (
-            <Home
-              product={product}
-              addToCart={addToCart}
-              cart={cart.total_items}
-            />
+            <Home product={product} addToCart={addToCart} cart={cart} />
           )}
         />
         <Route path="/services" component={Services} />
-        <Route path="/contact-us" component={Contact} />
+        <Route path="/contact" component={ContactUs} />
         <Route
           exact
           path="/cart"
@@ -93,7 +88,11 @@ function App() {
           exact
           path="/products"
           component={() => (
-            <Product product={product} addToCart={addToCart} cart={cart} />
+            <Product
+              product={product}
+              addToCart={addToCart}
+              cart={cart.total_items}
+            />
           )}
         />
       </Switch>
