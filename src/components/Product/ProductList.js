@@ -2,7 +2,7 @@ import React from "react";
 import "./product.css";
 import Item from "./Item";
 
-function Product({ product, addToCart, cart }) {
+function ProductList({ product, addToCart, cart }) {
   console.log("products", product);
   console.log("carts", cart);
   return (
@@ -19,4 +19,4 @@ function Product({ product, addToCart, cart }) {
   );
 }
 
-export default Product;
+export default ProductList;

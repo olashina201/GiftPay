@@ -1,8 +1,22 @@
-import React from "react";
-import "./shoppingcart.css";
+import React, { useState, useEffect } from "react";
+import { commerce } from "./Commerce";
+import "../assets/css/shoppingcart.css";
+import Cart from "./Cart";
 
-const ShoppingCart = ({ allCart }) => {
-  console.log(allCart);
+const ShoppingCart = () => {
+  const [state, setState] = useState({});
+  const [loading, setLoading] = useState(true);
+  console.log(state);
+
+  useEffect(async () => {
+    await commerce.cart.retrieve().then((cart) => {
+      setState(cart);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <h1>Loading...</h1>;
+
   return (
     <div className="card">
       <div className="row">
@@ -15,38 +29,13 @@ const ShoppingCart = ({ allCart }) => {
                 </h4>
               </div>
               <div className="col align-self-center text-right text-muted">
-                3 items
+                {`${state.total_unique_items} items`}
               </div>
             </div>
           </div>
-          {allCart.map((item) => {
-            <div className="row border-top border-bottom">
-              <div className="row main align-items-center">
-                <div className="col-2">
-                  <img
-                    className="img-fluid"
-                    src="https://i.imgur.com/1GrakTl.jpg"
-                  />
-                </div>
-                <div className="col">
-                  <div className="row text-muted">{item.name}</div>
-                  <div className="row">Cotton T-shirt</div>
-                </div>
-                <div className="col">
-                  {" "}
-                  <a href="#">-</a>
-                  <a href="#" className="border">
-                    1
-                  </a>
-                  <a href="#">+</a>{" "}
-                </div>
-                <div className="col">
-                  &euro; 44.00 <span className="close">&#10005;</span>
-                </div>
-              </div>
-            </div>;
+          {state.line_items.map((item) => {
+            <Cart item={item} key={item.id} />;
           })}
-
           <div className="back-to-shop">
             <a href="#">&leftarrow;</a>
             <span className="text-muted">Back to shop</span>
@@ -61,7 +50,7 @@ const ShoppingCart = ({ allCart }) => {
           <hr />
           <div className="row">
             <div className="col" style={{ paddingLeft: "0" }}>
-              ITEMS 3
+              {`${state.total_unique_items} items`}
             </div>
             <div className="col text-right">&euro; 132.00</div>
           </div>
@@ -79,7 +68,7 @@ const ShoppingCart = ({ allCart }) => {
             style={{ borderTop: "1px solid rgba(0,0,0,.1)", padding: "2vh 0" }}
           >
             <div className="col">TOTAL PRICE</div>
-            <div className="col text-right">&euro; 137.00</div>
+            <div className="col text-right">{`${state.subtotal.formatted_with_symbol}`}</div>
           </div>{" "}
           <button className="btn">CHECKOUT</button>
         </div>
