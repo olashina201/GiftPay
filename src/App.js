@@ -68,7 +68,10 @@ function App() {
           )}
         />
         <Route path="/services" component={Services} />
-        <Route path="/contact" component={ContactUs} />
+        <Route
+          path="/contact"
+          component={() => <ContactUs cart={cart.total_items} />}
+        />
         <Route
           exact
           path="/cart"

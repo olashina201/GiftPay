@@ -2,9 +2,7 @@ import React from "react";
 import "./product.css";
 import Item from "./Item";
 
-function ProductList({ product, addToCart, cart }) {
-  console.log("products", product);
-  console.log("carts", cart);
+function ProductList({ product, addToCart }) {
   return (
     <div className="products">
       <div className="container">

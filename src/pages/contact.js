@@ -2,10 +2,10 @@ import React from "react";
 import Contact from "../components/Contact/Contact";
 import NavBar from "../components/Navbar/NavBar";
 
-const ContactUs = () => {
+const ContactUs = ({ cart }) => {
   return (
     <>
-      <NavBar />
+      <NavBar cart={cart} />
       <Contact />
     </>
   );

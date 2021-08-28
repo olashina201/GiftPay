@@ -44,7 +44,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* <div className="col-md-3">
+          <div className="col-md-3">
             <div className="info_insta">
               <h5>Instagram</h5>
               <div className="insta_container">
@@ -87,7 +87,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
           <div className="col-md-3">
             <div className="info_form ">
               <h5>Newsletter</h5>
