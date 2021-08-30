@@ -10,7 +10,7 @@ const Home = ({ product, addToCart, cart }) => {
   return (
     <>
       <div className="hero_area">
-        <NavBar cart={cart.total_items} />
+        <NavBar cart={cart.total_unique_items} />
         <Slider />
       </div>
       <Discount />

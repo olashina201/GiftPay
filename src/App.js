@@ -10,6 +10,7 @@ import { commerce } from "./components/Commerce";
 import Trending from "./components/Trending/Trending";
 import Footer from "./components/Footer/Footer";
 import ShoppingCart from "./components/ShoppingCart";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -70,13 +71,26 @@ function App() {
         <Route path="/services" component={Services} />
         <Route
           path="/contact"
-          component={() => <ContactUs cart={cart.total_items} />}
+          component={() => <ContactUs cart={cart.total_unique_items} />}
         />
         <Route
           exact
           path="/cart"
           component={() => (
             <ShoppingCart
+              cart={cart}
+              loading={loading}
+              updateCartQty={updateCartQty}
+              removeCart={removeCart}
+              emptyCart={emptyCart}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/checkout"
+          component={() => (
+            <Checkout
               cart={cart}
               loading={loading}
               updateCartQty={updateCartQty}
@@ -94,7 +108,7 @@ function App() {
             <Product
               product={product}
               addToCart={addToCart}
-              cart={cart.total_items}
+              cart={cart.total_unique_items}
             />
           )}
         />

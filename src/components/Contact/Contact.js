@@ -37,7 +37,7 @@ function Contact() {
             <div className="map_container">
               <div className="map-responsive">
                 <iframe
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Lagos+Nigeria"
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Ojo+Lagos+Nigeria"
                   width="600"
                   height="300"
                   frameBorder="0"
